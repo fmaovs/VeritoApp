@@ -28,10 +28,10 @@ export default function LoginScreen() {
 
     return (
         <ExpoLinearGradient
-            colors={['#84224B', '#AF070E']}
-            start={{ x: 0.2, y: 0.1 }}
-            end={{ x: 1, y: 0.9 }}
-            locations={[0, 0.9]} // El morado cubre más espacio
+            colors={['#AF070E', '#84224B']}
+            start={{ x: 1, y: 0 }}
+            end={{ x: 0.2, y: 0.5 }}
+            locations={[0, 0.8]} // El morado cubre más espacio
             style={styles.container}
         >
             <View style={styles.logoContainer}>
@@ -73,7 +73,13 @@ export default function LoginScreen() {
                 </TouchableOpacity>
 
                 <Text style={styles.registerText}>
-                    o <Text style={styles.link}>Regístrate</Text>
+                    o {''}
+                    <Text
+                        style={styles.link}
+                        onPress={ () => router.push('/register')}
+                    >
+                        Regístrate
+                    </Text>
                 </Text>
             </View>
         </ExpoLinearGradient>
